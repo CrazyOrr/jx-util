@@ -1,5 +1,4 @@
 var Promise = require("es6-promise").Promise
-// npm install es6-promise --save --verbos
 
 /** * 
  * 提供各种工具方法 *
