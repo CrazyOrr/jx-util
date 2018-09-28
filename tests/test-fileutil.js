@@ -7,7 +7,7 @@ describe('file：功能测试', function() {
     describe('file.writeFile', function() {
  
         it('写文件：成功', function() {
-            var path = 'README.md';
+            var path = 'test.md';
             var data = '说明文档';
             return file.writeFile(path, data).then(function(flag) {
                 expect(flag).to.be.equal(true);
@@ -27,7 +27,7 @@ describe('file：功能测试', function() {
     describe('file.readFile功能测试', function() {
  
         it('读文件：成功', function() {
-            var path = 'README.md';
+            var path = 'test.md';
             return file.readFile(path).then(function(data) {
                 expect(data).to.be.equal('说明文档');
             });
