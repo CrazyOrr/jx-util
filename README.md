@@ -1,6 +1,15 @@
 JavaScript工具函数库
 ===========
 
+mocha 测试工具
+
+```
+
+npm install -g mocha --verbose
+
+npm install --save-dev chai --verbose
+```
+
 ## stringutil
 * changeCase&nbsp;-&nbsp;大小写转换
 * removeSpace&nbsp;-&nbsp;字符串去除空格
