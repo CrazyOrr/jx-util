@@ -7,6 +7,21 @@ JavaScript工具函数库
 - [ ] need core: https://github.com/findhit/util
 
 
+## 更新/发布
+
+```
+第一次
+
+npm adduser
+npm publish
+
+第n+1次
+
+npm login
+npm publish
+
+```
+
 ## 单元测试
 
 ```
