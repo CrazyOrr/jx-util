@@ -1,0 +1,23 @@
+{
+  "name": "jx-util",
+  "version": "1.0.0",
+  "description": "JavaScript utility functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BinaryArtists/JavaScript-utils.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "util"
+  ],
+  "author": "fallenink",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BinaryArtists/JavaScript-utils/issues"
+  },
+  "homepage": "https://github.com/BinaryArtists/JavaScript-utils#readme"
+}
