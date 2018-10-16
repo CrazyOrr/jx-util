@@ -1,21 +1,22 @@
 var f = {}
 
 // core
-require('./lib/core/is')( ƒ )
-require('./lib/core/from')( ƒ )
-require('./lib/core/to')( ƒ )
-require('./lib/core/object')( ƒ )
-require('./lib/core/core')( ƒ )
+
+require('./lib/core/core')( f )
+require('./lib/core/from')( f )
+require('./lib/core/is')( f )
+require('./lib/core/object')( f )
+require('./lib/core/to')( f )
 
 // lib
 
-require('./lib/array')( ƒ )
-require('./lib/date')( ƒ )
-require('./lib/function')( ƒ )
-require('./lib/random')( ƒ )
-require('./lib/regex')( ƒ )
-require('./lib/string')( ƒ )
-require('./lib/url')( ƒ )
+require('./lib/array')( f )
+require('./lib/date')( f )
+require('./lib/function')( f )
+require('./lib/random')( f )
+require('./lib/regex')( f )
+require('./lib/string')( f )
+require('./lib/url')( f )
 
 // Export it
-module.exports = ƒ
+module.exports = f

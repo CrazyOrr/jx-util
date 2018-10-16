@@ -1,4 +1,4 @@
-var reg = require('../lib/regutil.js')
+var util = require('../')
 var expect = require('chai').expect
 
 describe('reg 功能测试', function() {
@@ -8,12 +8,12 @@ describe('reg 功能测试', function() {
     let case1 = '11aa我'
     it(`检验 [${case1}] - 成功`, function() {
 
-      expect(reg.isValidName(case1)).to.be.equal(true)
+      expect(util.regex.isValidName(case1)).to.be.equal(true)
     })
 
     let case2 = '11_'
     it(`检验 [${case2}] - 失败`, function() {
-      expect(reg.isValidName(case2)).to.be.equal(false)
+      expect(util.regex.isValidName(case2)).to.be.equal(false)
     })
   })
 })
