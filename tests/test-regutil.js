@@ -1,4 +1,4 @@
-var reg = require('../regutil.js')
+var reg = require('../lib/regutil.js')
 var expect = require('chai').expect
 
 describe('reg 功能测试', function() {

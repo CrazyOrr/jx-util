@@ -1,4 +1,4 @@
-var file = require('../fileutil.js')
+var file = require('../lib/fileutil.js')
 var expect = require('chai').expect
  
 describe('file：功能测试', function() {
