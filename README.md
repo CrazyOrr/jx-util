@@ -129,3 +129,6 @@ istanbul cover ./node_modules/mocha/bin/_mocha -- -t 2000 --recursive -R spec te
 * osInfo            获取操作系统类型
 * getKeyboardKeyName            根据keycode获得键名
 
+## 这个很棒
+
+* [util.js](https://github.com/TinkoffCreditSystems/utils.js)
