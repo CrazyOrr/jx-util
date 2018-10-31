@@ -10,15 +10,18 @@ JavaScript工具函数库
 ## [更新/发布](https://www.cnblogs.com/penghuwan/p/6973702.html)
 
 ```
-第一次
+// 第一次发布
 
 npm adduser
 npm publish
 
-第n+1次
+// 第n+1次发布
 
 npm login
 npm publish
+
+// 查看包的版本
+npm view jx-util version
 
 ```
 

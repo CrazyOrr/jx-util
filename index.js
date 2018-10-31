@@ -18,6 +18,7 @@ require('./lib/number')( f )
 require('./lib/random')( f )
 require('./lib/regex')( f )
 require('./lib/string')( f )
+require('./lib/timer')( f )
 require('./lib/url')( f )
 
 // Export it
