@@ -33,7 +33,7 @@ npm install es6-promise --save --verbose
 npm install -g mocha --verbose
 npm install --save-dev chai --verbose
 
-mocha uniteat/index.js
+mocha tests/test-regex.js
 
 持续测试
 mocha --watch tests
@@ -48,6 +48,12 @@ mocha --reporter mochawesome tests
 npm install -g istanbul --verbose
 
 istanbul cover ./node_modules/mocha/bin/_mocha -- -t 2000 --recursive -R spec tests/
+```
+
+## core
+
+```
+
 ```
 
 ## stringutil
