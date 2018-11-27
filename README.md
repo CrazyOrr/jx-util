@@ -62,6 +62,7 @@ istanbul cover ./node_modules/mocha/bin/_mocha -- -t 2000 --recursive -R spec te
 | extend | 对象扩展函数 |
 | slice | 片取函数 |
 | stamp | 邮戳函数 |
+| ----- | ------- |
 
 ## stringutil
 
