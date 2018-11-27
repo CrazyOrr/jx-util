@@ -77,4 +77,23 @@ describe('function 功能测试', function() {
       expect(count() === 15).to.be.equal(true)
     })
   })
+
+  describe('curry', function () {
+    function add () {
+      arguments.reduce((p, c) => {
+        return p+c
+      })
+    }
+
+    var curriedAdd = util.function.curry(add)
+    let sum1 = curriedAdd (1, 2, 3, 4)
+
+    let sumCurriedAdd2 = curriedAdd (1, 2, 3)
+
+    let sum2 = sumCurriedAdd2 (4)
+
+    it(`测试 curry`, function() {
+      expect(sum1 === sum2).to.be.equal(true)
+    })
+  })
 })
