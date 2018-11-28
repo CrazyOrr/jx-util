@@ -142,4 +142,24 @@ describe('function 功能测试', function() {
       }, 1000)
     })
   })
+
+  describe('pipes', function () {
+    function step1 () {
+      return 2
+    }
+
+    function step2 (c) {
+      return c+4
+    }
+
+    function step3 (c) {
+      return c*3
+    }
+
+    let count = util.function.pipes(step1, step2, step3)
+
+    it(`测试 pipes ${count()} = 18`, function() {
+      expect(count() === 18).to.be.equal(true)
+    })
+  })
 })
