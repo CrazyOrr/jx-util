@@ -20,12 +20,12 @@ describe('function 功能测试', function() {
     })
   })
 
-  describe('$args', function () {
+  describe('args', function () {
     function test (a) {
 
     }
 
-    let params = util.function.$args(test) // 这是angularjs的注入原理
+    let params = util.function.args(test) // 这是angularjs的注入原理
 
     it(`测试 $args`, function() {
       expect(params[0] === 'a').to.be.equal(true)
@@ -80,7 +80,8 @@ describe('function 功能测试', function() {
 
   describe('curry', function () {
     function add () {
-      arguments.reduce((p, c) => {
+      let args = util.function.argsly(arguments)
+      args.reduce((p, c) => {
         return p+c
       })
     }
@@ -88,12 +89,57 @@ describe('function 功能测试', function() {
     var curriedAdd = util.function.curry(add)
     let sum1 = curriedAdd (1, 2, 3, 4)
 
-    let sumCurriedAdd2 = curriedAdd (1, 2, 3)
+    curriedAdd (1, 2, 3)
 
-    let sum2 = sumCurriedAdd2 (4)
+    let sum2 = curriedAdd (4)
 
     it(`测试 curry`, function() {
       expect(sum1 === sum2).to.be.equal(true)
+    })
+  })
+
+  describe('throttle', function (done) {
+    let before = new Date().getUTCSeconds()
+
+    let count = 1
+
+    function add () {
+      count ++
+    }
+
+    let throttledAdd = util.function.throttle(60, true, add, true)
+
+    throttledAdd()
+    throttledAdd()
+    throttledAdd()
+    
+    it(`count 应该等于 4`, function() {
+      setTimeout(function () {
+        expect(count === 4).to.be.equal(true)
+        done()
+      }, 1000)
+    })
+  })
+
+  describe('debounce', function (done) {
+    let count = 1
+
+    function add () {
+      count ++
+    }
+
+    let debouncedAdd = util.function.debounce(600, add)
+
+    debouncedAdd()
+    debouncedAdd()
+    debouncedAdd()
+
+    it(`count 应该等于 2`, function() {
+      setTimeout(function () {
+      
+        expect(count === 2).to.be.equal(true)
+        done()
+      }, 1000)
     })
   })
 })
