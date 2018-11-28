@@ -100,6 +100,29 @@ istanbul cover ./node_modules/mocha/bin/_mocha -- -t 2000 --recursive -R spec te
 
 | 函数名 | 功能 |
 | ------ | ------ |
+| instanceof | ------ |
+| function | ------ |
+| array | ------ |
+| object | ------ |
+| string | ------ |
+| error | ------ |
+| regexp | ------ |
+| HTMLelement | ------ |
+| number | ------ |
+| undefined | ------ |
+| true | ------ |
+| false | ------ |
+| null | ------ |
+| json | json 字符串，不为字符串，则返回false |
+| bool | ------ |
+| symbol | ------ |
+| date | ------ |
+| promise | ------ |
+| not | ------ |
+| ok | ------ |
+| plain | ------ |
+| empty | ------ |
+| equal | ------ |
 
 ## object
 
