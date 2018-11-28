@@ -128,6 +128,30 @@ istanbul cover ./node_modules/mocha/bin/_mocha -- -t 2000 --recursive -R spec te
 
 | 函数名 | 功能 |
 | ------ | ------ |
+| forEach, each | ------ |
+| map | ------ |
+| filter | ------ |
+| clone | ------ |
+| isEmpty | ------ |
+| clean | ------ |
+| fromPairs | ------ |
+| toPairs | ------ |
+| shallowClone | ------ |
+| truthCheckCollection | ------ |
+| has | ------ |
+| keyBy | ------ |
+| merge | ------ |
+| mergeDeep | ------ |
+| mergeWith | ------ |
+| keys | ------ |
+| values | ------ |
+| entries | ------ |
+| pick | ------ |
+| omit | ------ |
+| prop | ------ |
+| propApply | ------ |
+| propEq | ------ |
+| size | ------ |
 
 ## to
 
