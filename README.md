@@ -4,7 +4,7 @@ JavaScript工具函数库
 *TODO*
 
 - [ ] 测试覆盖率 100%
-- [ ] need core: https://github.com/findhit/util
+- [x] need core: https://github.com/findhit/util
 
 
 ## [更新/发布](https://www.cnblogs.com/penghuwan/p/6973702.html)

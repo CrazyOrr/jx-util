@@ -20,6 +20,20 @@ describe('function 功能测试', function() {
     })
   })
 
+  describe('perform', function() {
+    let ctx = {
+      test ( val ) {
+        return 10+val
+      }
+    }
+
+    let ret = util.function.perform(ctx, 'test', 5)
+
+    it(`测试 perform`, function() {
+      expect(ret === 15).to.be.equal(true)
+    })
+  })
+
   describe('args', function () {
     function test (a) {
 
