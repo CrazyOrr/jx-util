@@ -88,4 +88,15 @@ describe('Object', function() {
       expect(util.object.isEmpty(obj) === true).to.be.equal(true)
     })
   })
+
+  describe('extend', function() {
+    let obj = {
+    }
+
+    let obj2 = util.object.extend(obj, {a:1})
+
+    it(`检验 extend`, function() {
+      expect(obj2 === obj && obj.a === 1).to.be.equal(true)
+    })
+  })
 })
