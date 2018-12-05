@@ -1,6 +1,6 @@
 {
   "name": "jx-util",
-  "version": "2.0.10",
+  "version": "2.1.0",
   "description": "JavaScript utility functions",
   "main": "index.js",
   "scripts": {
