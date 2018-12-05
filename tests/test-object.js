@@ -67,6 +67,18 @@ describe('Object', function() {
     })
   })
 
+  describe('clone', function() {
+    let obj = {
+      a: 1
+    }
+
+    let obj2 = util.object.clone(obj)
+
+    it(`检验 clone`, function() {
+      expect(obj2 !== obj && obj2.a === 1).to.be.equal(true)
+    })
+  })
+
   describe('clean', function() {
     let obj = {
       key: 10,
@@ -86,6 +98,16 @@ describe('Object', function() {
 
     it(`检验 isEmpty`, function() {
       expect(util.object.isEmpty(obj) === true).to.be.equal(true)
+    })
+  })
+
+  describe('fromPairs', function() {
+    let pairs = [['a', 1], ['b', 2], ['c', 3]]
+
+    let obj = util.object.fromPairs(pairs)
+
+    it(`检验 fromPairs`, function() {
+      expect(obj.a === 1).to.be.equal(true)
     })
   })
 

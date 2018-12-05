@@ -137,9 +137,7 @@ istanbul cover ./node_modules/mocha/bin/_mocha -- -t 2000 --recursive -R spec te
 | fromPairs | ------ |
 | toPairs | ------ |
 | shallowClone | ------ |
-| truthCheckCollection | ------ |
 | has | ------ |
-| keyBy | ------ |
 | merge | ------ |
 | mergeDeep | ------ |
 | mergeWith | ------ |
@@ -157,9 +155,40 @@ istanbul cover ./node_modules/mocha/bin/_mocha -- -t 2000 --recursive -R spec te
 
 | 函数名 | 功能 |
 | ------ | ------ |
+| string | ------ |
 
+## array 
 
-
+| 函数名 | 功能 |
+| ------ | ------ |
+| head/first | 首位元素 |
+| tail/last | 末尾元素 |
+| disorder/shuffle | 打乱 |
+| equal | 等价 |
+| contains | 包含 |
+| flatten | 扁平化 |
+| randomOne | 随机选取 |
+| countOccurrences | 计算元素数目 |
+| unique | 去重 |
+| sum | 求和（数值型数组） |
+| maxify | 求最大值（数值型数组） |
+| minify | 求最小值（数值型数组） |
+| forEach/each | 遍历 |
+| clone | 克隆 |
+| map | 映射 |
+| filter | 过滤 |
+| del/rm/remove | 移除 |
+| randomFilter | 指定元素数目，随机过滤 |
+| empty | 清空 |
+| union/merge | 求并集 |
+| intersect | 求交集 |
+| adjust | 对指定元素加值 |
+| allPass | 全量判定 |
+| anyPass | 选择判定 |
+| append | 追加元素 |
+| concat | 拼接数组 |
+| diff | 求差集 |
+| slice | 片取 |
 
 ## rx
 
