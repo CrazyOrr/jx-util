@@ -5,6 +5,7 @@ JavaScript工具函数库
 
 - [ ] 测试覆盖率 100%
 - [x] need core: https://github.com/findhit/util
+- [ ] js beautify 打印 obj中嵌套 json string，被嵌套的部分没有格式化
 
 
 ## [更新/发布](https://www.cnblogs.com/penghuwan/p/6973702.html)
