@@ -191,10 +191,19 @@ istanbul cover ./node_modules/mocha/bin/_mocha -- -t 2000 --recursive -R spec te
 | diff | 求差集 |
 | slice | 片取 |
 
-## rx
+## date 
 
-管道+源、运算子、消费
+| 函数名 | 功能 |
+| ------ | ------ |
+| head/first | 首位元素 |
 
-## 这个很棒
+## number
 
-* [util.js](https://github.com/TinkoffCreditSystems/utils.js)
+
+## regex
+
+## string
+
+## timer
+
+## url
