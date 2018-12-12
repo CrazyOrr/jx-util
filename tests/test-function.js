@@ -22,15 +22,27 @@ describe('function 功能测试', function() {
 
   describe('perform', function() {
     let ctx = {
+      num: 10,
       test ( val ) {
-        return 10+val
+        return this.num+val
       }
     }
 
-    let ret = util.function.perform(ctx, 'test', 5)
+  
+    let fn = function (val, val1) {
+      return this.num+val+val1
+    }
 
-    it(`测试 perform`, function() {
-      expect(ret === 15).to.be.equal(true)
+    let ret1 = util.function.perform(ctx, 'test', 5)
+
+    it(`测试 perform, fn as name, ${ret1}`, function() {
+      expect(ret1 === 15).to.be.equal(true)
+    })
+
+    let ret2 = util.function.perform(ctx, fn, 5, 6)
+
+    it(`测试 perform, fn as function, ${ret2}`, function() {
+      expect(ret2 === 15).to.be.equal(true)
     })
   })
 
