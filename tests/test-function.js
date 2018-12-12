@@ -29,8 +29,8 @@ describe('function 功能测试', function() {
     }
 
   
-    let fn = function (val, val1) {
-      return this.num+val+val1
+    let fn = function (val) {
+      return this.num+val
     }
 
     let ret1 = util.function.perform(ctx, 'test', 5)
@@ -39,7 +39,7 @@ describe('function 功能测试', function() {
       expect(ret1 === 15).to.be.equal(true)
     })
 
-    let ret2 = util.function.perform(ctx, fn, 5, 6)
+    let ret2 = util.function.perform(ctx, fn, 5)
 
     it(`测试 perform, fn as function, ${ret2}`, function() {
       expect(ret2 === 15).to.be.equal(true)
