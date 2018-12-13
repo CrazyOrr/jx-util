@@ -24,6 +24,9 @@ describe('is 功能测试', function() {
     it(`obj should be Object`, function() {
       expect(util.is.object(obj)).to.be.equal(true)
     })
+    it(`obj should not Object`, function() {
+      expect(util.is.object('')).to.be.equal(false)
+    })
 
     it(`str should be String`, function() {
       expect(util.is.string(str)).to.be.equal(true)
