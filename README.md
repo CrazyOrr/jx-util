@@ -5,7 +5,7 @@ JavaScript工具函数库
 
 - [ ] 测试覆盖率 100%
 - [x] need core: https://github.com/findhit/util
-- [ ] js beautify 打印 obj中嵌套 json string，被嵌套的部分没有格式化
+- [x] js beautify 打印 obj中嵌套 json string，被嵌套的部分没有格式化
 
 
 ## [更新/发布](https://www.cnblogs.com/penghuwan/p/6973702.html)
@@ -25,7 +25,8 @@ npm view jx-util version
 
 ## 单元测试
 
-[Mocha测试异步代码](https://harttle.land/2016/07/12/async-test-with-chai-as-promised.html)
+[Mocha测试异步代码](https://harttle.land/2016/07/12/async-test-with-chai-as-promised.html),
+[在Nodejs中贯彻单元测试](https://www.jianshu.com/p/3bcac18945a3)
 
 ```
 // 安装依赖
@@ -207,3 +208,24 @@ istanbul cover ./node_modules/mocha/bin/_mocha -- -t 2000 --recursive -R spec te
 ## timer
 
 ## url
+
+## logger
+
+*基本功能*
+
+* 日志级别
+* 模块信息、字段信息与格式
+
+
+*重要组件*
+
+| 组件名称 | 对应类名 | 功能描述 |
+| ------ | ------ | ------ |
+| 日志器 | Logger | 提供了应用程序可一直使用的接口 |
+| 处理器	| Handler |	将logger创建的日志记录发送到合适的目的输出 |
+| 过滤器	| Filter| 提供了更细粒度的控制工具来决定输出哪条日志记录，丢弃哪条日志记录 |
+| 格式器	| Formatter	| 决定日志记录的最终输出格式 |
+
+
+
+
