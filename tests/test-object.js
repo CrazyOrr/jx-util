@@ -121,4 +121,21 @@ describe('Object', function() {
       expect(obj2 === obj && obj.a === 1).to.be.equal(true)
     })
   })
+
+  describe('mergeDiff', function() {
+    let obj = {
+      a: 1,
+      b: 2
+    }
+    let obj2 = {
+      b: 3,
+      c: 4
+    }
+
+    let obj3 = util.object.mergeDiff(obj, obj2)
+
+    it(`检验 extend`, function() {
+      expect(obj3.b === 2 && obj.c === 4).to.be.equal(true)
+    })
+  })
 })
