@@ -16,8 +16,6 @@ describe('logger 功能测试', function() {
     logger.tag(__TAG_INIT__).info('222222')
     logger.setEnabled(true)
     logger.tag(__TAG_INIT__).info('333333')
-    
-    logger.tag(__TAG_INIT__).info('ddddddd')
 
     it('默认', function() {
       expect(true).to.be.equal(true)
