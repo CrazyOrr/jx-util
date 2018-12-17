@@ -5,6 +5,20 @@ var expect = require('chai').expect
 describe('Stack 功能测试', function() {
 
   describe('全量测试', function() {
+    it(`Stack without init`, function() {
+      let s1 = new Stack()
+
+      s1.push(1)
+      s1.push(1)
+      s1.push(1)
+      s1.push(1)
+      s1.push(1)
+
+      // console.log(s1.desc())
+
+      expect(s1.length() == 5).to.be.equal(true)
+    })
+
     it(`Stack set length = 0`, function() {
       let s1 = new Stack()
 
