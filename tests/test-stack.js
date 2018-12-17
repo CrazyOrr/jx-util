@@ -85,6 +85,18 @@ describe('Stack 功能测试', function() {
 
       expect(s5.top() == 4).to.be.equal(true)
     })
+
+    it(`Stack desc`, function() {
+      let s5 = new Stack()
+
+      s5.init(3)
+
+      s5.push(1)
+      s5.push(2)
+      s5.push(4)
+
+      expect(s5.desc() == '1,2,4').to.be.equal(true)
+    })
     
   })
 })
