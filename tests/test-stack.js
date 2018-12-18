@@ -76,6 +76,10 @@ describe('Stack 功能测试', function() {
     })
 
     it(`Stack clear`, function() {
+      let s6 = new Stack()
+
+      s6.clear()
+
       let s5 = new Stack()
 
       s5.init(3)
