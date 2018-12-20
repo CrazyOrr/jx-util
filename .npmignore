@@ -1,4 +1,5 @@
 tests/
+dev/
 node_modules/
 README.md
 DOCUMENT.md

@@ -45,10 +45,21 @@ describe('logger 功能测试', function() {
 
   describe(__TAG_HANDLER__, function() {
     
-    logger.tag(__TAG_HANDLER__).info('ddddddd')
+    logger.tag(__TAG_HANDLER__).info('begin to test handler')
+
+    var hasError = false
+    var handler = function (type, msg) {
+
+      if (type==='ERROR') {
+        hasError = true
+      }
+    }
+    logger.setHandler(handler)
+
+    logger.tag(__TAG_HANDLER__).error('end to test handler')
 
     it('默认', function() {
-      expect(true).to.be.equal(true)
+      expect(hasError).to.be.equal(true)
     })
     
   })
