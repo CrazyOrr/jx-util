@@ -188,4 +188,41 @@ describe('function 功能测试', function() {
       expect(count() === 18).to.be.equal(true)
     })
   })
+
+  describe('awaitAll', function () {
+    function wait(ms) {return new Promise(resolve => setTimeout(() => resolve(), ms));}
+
+    async function fn1() {
+      await wait(1000);
+      console.log('fn1');
+      await wait(1000);
+      return 'fn1';
+    }
+
+    async function fn2() {
+      await wait(3000);
+      console.log('fn2');
+      return 'fn2';
+    }
+
+    async function fn3() {
+      console.log('fn3');
+      await wait(2000);
+      return 'fn3';
+    }
+
+    function fn4() {
+      console.log('fn4');
+      return 'fn4';
+    }
+
+    util.function.awaitAll(fn1, fn2, fn3, fn4).then(results => {
+      console.log(results);
+    });
+    // 在3秒后，返回结果列表
+
+    it(`测试 pipes ${count()} = 18`, function() {
+      expect(true).to.be.equal(true)
+    })
+  })
 })
