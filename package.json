@@ -1,13 +1,14 @@
 {
   "name": "jx-util",
-  "version": "2.1.9",
+  "version": "2.1.12",
   "description": "JavaScript utility functions",
   "main": "index.js",
   "scripts": {
     "watch": "mocha --watch tests/",
     "test": "mocha --reporter spec --timeout 2000 --recursive tests/",
     "test-cov": "istanbul cover ./node_modules/mocha/bin/_mocha -- -t 2000 --recursive  -R spec tests/",
-    "test-html": "mocha --reporter mochawesome tests/"
+    "test-html": "mocha --reporter mochawesome tests/",
+    "jest": "jest"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
   "homepage": "https://github.com/BinaryArtists/JavaScript-utils#readme",
   "devDependencies": {
     "chai": "^4.2.0",
+    "jest": "^23.6.0",
     "mocha": "^5.2.0",
     "mochawesome": "^3.0.3"
   },
