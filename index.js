@@ -21,5 +21,10 @@ require('./lib/string')( f )
 require('./lib/timer')( f )
 require('./lib/url')( f )
 
+//FIXME: 还是函数拆分好，减少包大小
+// FIXME: js-beautify 瘦身
+
 // Export it
 module.exports = f
+
+// export const a = i;// FIXME:es 6 模块切块，细微导出？
