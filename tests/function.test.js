@@ -1,4 +1,4 @@
-var util = require('../')
+var util = require('..')
 var expect = require('chai').expect
 
 describe('function 功能测试', function() {
@@ -46,15 +46,27 @@ describe('function 功能测试', function() {
     })
   })
 
-  describe('args', function () {
+  describe('argNames', function () {
     function test (a) {
 
     }
 
-    let params = util.function.args(test) // 这是angularjs的注入原理
+    let params = util.function.argNames(test) // 这是angularjs的注入原理
 
-    it(`测试 $args`, function() {
+    it(`测试 argNames`, function() {
       expect(params[0] === 'a').to.be.equal(true)
+    })
+  })
+
+  describe('name', function () {
+    function test (a) {
+
+    }
+
+    let name = util.function.name(test) // 这是angularjs的注入原理
+
+    it(`测试 name`, function() {
+      expect(name === 'test').to.be.equal(true)
     })
   })
 
@@ -106,7 +118,7 @@ describe('function 功能测试', function() {
 
   describe('curry', function () {
     function add () {
-      let args = util.function.argsly(arguments)
+      let args = util.function.argValues(arguments)
       args.reduce((p, c) => {
         return p+c
       })
@@ -221,8 +233,30 @@ describe('function 功能测试', function() {
     });
     // 在3秒后，返回结果列表
 
-    it(`测试 pipes ${count()} = 18`, function() {
-      expect(true).to.be.equal(true)
+    // it(`测试 awaitAll`, function() {
+    //   expect(true).to.be.equal(true)
+    // })
+  })
+
+  describe('aspectify', function () {
+    let val = 2
+    let obj = {}
+    obj.test = function ddd () {
+      val = val*4
+    }
+
+    obj.testly = util.function.aspectify(obj.test)
+
+    obj.testly1 = obj.testly.before(function () {
+      val = val-1
+    }).after(function () {
+      val = val+ 1
+    });
+
+    obj.testly1()
+
+    it(`测试 aspectify`, function() {
+      expect(val === 5).to.be.equal(true)
     })
   })
 })
