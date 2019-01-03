@@ -11,6 +11,8 @@ JavaScript工具函数库
 ## [更新/发布](https://www.cnblogs.com/penghuwan/p/6973702.html)
 
 ```
+main.minor.patch
+
 // 第一次发布
 npm adduser
 npm publish
