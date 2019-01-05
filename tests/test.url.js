@@ -10,7 +10,7 @@ describe('url 功能测试', function() {
 
     let obj = utils.url.decode(str)
 
-    console.log(obj)
+    // console.log(obj)
 
     it(`测试 decode`, function() {
 
@@ -23,6 +23,13 @@ describe('url 功能测试', function() {
     it(`测试 encode`, function() {
 
       expect(url2===str).to.be.equal(true)
+    })
+
+    let url3 = utils.url.encode('http')
+
+    it(`测试 encode`, function() {
+
+      expect(url3==='http').to.be.equal(true)
     })
     
   })
