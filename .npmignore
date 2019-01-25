@@ -3,3 +3,5 @@ dev/
 node_modules/
 README.md
 DOCUMENT.md
+.idea/
+/src/
