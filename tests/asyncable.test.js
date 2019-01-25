@@ -1,4 +1,4 @@
-let Asyncable = require('../lib/pattern/asyncable')
+let Asyncable = require('../src/pattern/asyncable')
 
 test('', (done) => {
   let a = new Asyncable()
@@ -13,5 +13,5 @@ test('', (done) => {
     a.then()
   }, 10)
 
-  
+
 });

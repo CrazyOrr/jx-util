@@ -1,4 +1,4 @@
-var signals = require('../lib/support/signals')
+var signals = require('../src/support/signals')
 
 var expect = require('chai').expect
 

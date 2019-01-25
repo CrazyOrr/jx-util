@@ -1,4 +1,4 @@
-var Asyncable = require('../lib/pattern/asyncable')
+var Asyncable = require('../src/pattern/asyncable')
 // import Asyncable from '../lib/pattern/asyncable'
 var expect = require('chai').expect
 
@@ -20,5 +20,5 @@ describe('Asyncable 功能测试', function() {
     })
   })
 
-  
+
 })

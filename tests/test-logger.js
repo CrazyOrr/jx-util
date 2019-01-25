@@ -1,4 +1,4 @@
-var logger = require('../lib/support/logger')
+var logger = require('../src/support/logger')
 var expect = require('chai').expect
 
 const __TAG_INIT__ = '日志初始化'
@@ -20,31 +20,31 @@ describe('logger 功能测试', function() {
     it('默认', function() {
       expect(true).to.be.equal(true)
     })
-    
+
   })
 
   describe(__TAG_LEVEL__, function() {
-    
+
     logger.tag(__TAG_LEVEL__).info('ddddddd')
 
     it('默认', function() {
       expect(true).to.be.equal(true)
     })
-    
+
   })
 
   describe(__TAG_OUT__, function() {
-    
+
     logger.tag(__TAG_OUT__).info('ddddddd')
 
     it('默认', function() {
       expect(true).to.be.equal(true)
     })
-    
+
   })
 
   describe(__TAG_HANDLER__, function() {
-    
+
     logger.tag(__TAG_HANDLER__).info('begin to test handler')
 
     var hasError = false
@@ -61,6 +61,6 @@ describe('logger 功能测试', function() {
     it('默认', function() {
       expect(hasError).to.be.equal(true)
     })
-    
+
   })
 })

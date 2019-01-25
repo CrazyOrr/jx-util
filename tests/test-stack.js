@@ -1,5 +1,5 @@
 // var util = require('../')
-var Stack = require('../lib/struct/stack')
+var Stack = require('../src/struct/stack')
 var expect = require('chai').expect
 
 describe('Stack 功能测试', function() {
@@ -63,7 +63,7 @@ describe('Stack 功能测试', function() {
       s3.init(3)
       s3.push(1)
       s3.push(2)
-  
+
       let ret = s3.pop()
       expect(ret == 2).to.be.equal(true)
     })
@@ -115,6 +115,6 @@ describe('Stack 功能测试', function() {
 
       expect(s5.desc() == '1,2,4').to.be.equal(true)
     })
-    
+
   })
 })
